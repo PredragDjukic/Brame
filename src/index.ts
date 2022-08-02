@@ -1,6 +1,6 @@
 import express, { Express, Request, Response } from 'express';
 import dotenv from 'dotenv';
-import { initializeDatabase, myDataSource } from './db';
+import { initializeDatabase } from './db';
 import authRoutes from "./routes/authRoutes";
 
 dotenv.config();
