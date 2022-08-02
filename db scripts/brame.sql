@@ -7,9 +7,9 @@ create table users
 
 create table campaign
 (
-    Id int primary key,
+    Id int primary key identity,
     name varchar(100) not null,
     status int not null,
-    startDate timestamp null,
-    imagePath varchar(300) null
+    start_date timestamp null,
+    image_path varchar(300) null
 )

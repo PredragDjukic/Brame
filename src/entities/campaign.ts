@@ -1,15 +1,15 @@
-import {Entity, Column, PrimaryColumn, BaseEntity } from "typeorm";
+import {Entity, Column, BaseEntity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class campaign extends BaseEntity {
-  @PrimaryColumn({ type: 'int' })
+  @PrimaryGeneratedColumn({ type: 'int' })
   id!: number;
   @Column({ type: 'varchar', nullable: false })
   name!: string;
   @Column({ type: 'int', nullable: false })
-  status!: string;
+  status!: number;
   @Column({ type: 'timestamp', nullable: true })
-  startDate!: string;
+  start_date!: Date | null;
   @Column({ type: 'varchar', nullable: true })
-  imagePath!: string;
+  image_path!: string;
 }

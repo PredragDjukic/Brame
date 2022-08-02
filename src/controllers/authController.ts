@@ -1,4 +1,4 @@
-import { Response } from "express"
+import { Response } from "express";
 import * as authService from "../services/authService";
 
 export async function signUp(req: any, res: Response) {
