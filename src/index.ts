@@ -1,6 +1,6 @@
 import express, { Express, Request, Response } from 'express';
 import dotenv from 'dotenv';
-import { myDataSource } from './db';
+import { initializeDatabase, myDataSource } from './db';
 import authRoutes from "./routes/authRoutes";
 
 dotenv.config();
@@ -20,11 +20,4 @@ app.listen(port, () => {
   console.log(`Server is running at https://localhost:${port}`);
 });
 
-myDataSource
-    .initialize()
-    .then(() => {
-        console.log("Data Source has been initialized!");
-    })
-    .catch((err: any) => {
-        console.error("Error during Data Source initialization:", err)
-    })
+initializeDatabase();

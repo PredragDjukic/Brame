@@ -11,3 +11,14 @@ export const myDataSource = new DataSource({
     entities: [users],
     logging: true
 })
+
+export function initializeDatabase() {
+    myDataSource
+        .initialize()
+        .then(() => {
+            console.log("Data Source has been initialized!");
+        })
+        .catch((err: any) => {
+            console.error("Error during Data Source initialization:", err)
+        })
+}
