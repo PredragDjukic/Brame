@@ -1,4 +1,5 @@
 import { DataSource } from "typeorm"
+import { campaign } from "./entities/campaign";
 import { users } from "./entities/users"
 
 export const myDataSource = new DataSource({
@@ -8,7 +9,7 @@ export const myDataSource = new DataSource({
     username: "postgres",
     password: "postgres",
     database: "brame_db",
-    entities: [users],
+    entities: [users, campaign],
     logging: true
 })
 
