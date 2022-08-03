@@ -24,3 +24,10 @@ Create 2 variables
 
 *authToken* with initial random string. This one will be set up automatically after a sign up
 
+## Run the application
+
+To run the application use
+
+```bash
+npm run dev
+```
